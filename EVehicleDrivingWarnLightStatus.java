@@ -77,8 +77,7 @@ public class EVehicleDrivingWarnLightStatus extends TransactionEntity{
     private boolean dieselExhaustFluidLight;
     @Column(name = "DPF_LIGHT")
     private boolean dieselParticulateFilter;
-    @Column(name = "IS_ACTIVE")
-    private boolean isActive;
+    
 
 
 }
