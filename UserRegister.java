@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserRegister {
+public class UserRegister extends TransactionEntityDto{
 
     @Size(max = 10)
     private String apartmentNumber;
