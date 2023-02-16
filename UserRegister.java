@@ -55,11 +55,10 @@ public class UserRegister extends TransactionEntityDto{
     @NotNull
     @Size(max = 5)
     private String zipCode;
-    @NotNull
-    @Size(max = 15)
+    
+    
     private ConfigurationCodes roleId;
-    @NotNull
-    @Size(max = 15)
+    
     private DealerRegistration dealerId;
 
 }
