@@ -40,7 +40,7 @@ public class ESignDet extends TransactionEntity{
     @Column(name = "E_SIGN_DOC")
     private String signDocument;
 
-    @OneToOne(targetEntity = EAppraiseVehicle.class, fetch = FetchType.LAZY)
+    @OneToOne(targetEntity = EAppraiseVehicle.class, fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "APPR_REF_ID",referencedColumnName = "APPR_REF_ID", nullable = false)
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private EAppraiseVehicle appraisalReferenceId;
