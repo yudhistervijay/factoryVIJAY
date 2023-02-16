@@ -44,10 +44,6 @@ public class ESignDet extends TransactionEntity{
     @JoinColumn(name = "APPR_REF_ID",referencedColumnName = "APPR_REF_ID", nullable = false)
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private EAppraiseVehicle appraisalReferenceId;
-    @Column(name = "IS_ACTIVE")
-    private boolean isActive;
-
-
-
+    
 
 }
