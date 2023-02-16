@@ -53,12 +53,12 @@ public class EUserRegister extends TransactionEntity{
     @Column(name = "ZIP_CODE")
     private String zipCode;
 
-    @OneToOne(targetEntity = EConfigurationCodes.class, fetch = FetchType.LAZY)
+    @OneToOne(targetEntity = EConfigurationCodes.class, fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     @JoinColumn(name = "ROLE_ID", referencedColumnName = "CODE_ID", nullable = false)
     private EConfigurationCodes roleId;
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
-    @OneToOne(targetEntity = EDealerRegistration.class, fetch = FetchType.LAZY)
+    @OneToOne(targetEntity = EDealerRegistration.class, fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "DEALER_ID", referencedColumnName = "DEALER_ID",nullable = false)
     @Column(name = "DEALER_ID")
     private EDealerRegistration dealerId;
