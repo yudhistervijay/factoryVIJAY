@@ -5,7 +5,7 @@ import com.sun.istack.NotNull;
 
 import javax.validation.constraints.Size;
 
-public class VehicleDrivingWarnLightStatus {
+public class VehicleDrivingWarnLightStatus extends TransactionEntityDto {
     @NotNull
     @Size(max = 15)
     private AppraisalTestDrivingStatus appraiseStatusId;
