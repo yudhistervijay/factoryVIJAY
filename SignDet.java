@@ -18,8 +18,7 @@ public class SignDet extends TransactionEntityDto{
     @NotNull
     @Size(max = 17)
     private String signDocument;
-    @NotNull
-    @Size(max = 15)
+    
     private AppraiseVehicle appraisalReferenceId;
 
 
