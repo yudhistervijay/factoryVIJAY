@@ -62,8 +62,7 @@ public class EUserRegister extends TransactionEntity{
     @JoinColumn(name = "DEALER_ID", referencedColumnName = "DEALER_ID",nullable = false)
     @Column(name = "DEALER_ID")
     private EDealerRegistration dealerId;
-    @Column(name = "IS_ACTIVE")
-    private boolean isActive;
+    
 
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     @OneToOne(mappedBy = "userId")
