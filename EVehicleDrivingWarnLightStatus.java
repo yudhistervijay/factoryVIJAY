@@ -37,7 +37,7 @@ public class EVehicleDrivingWarnLightStatus extends TransactionEntity{
     @SequenceGenerator(name = "veh_warn_light_status_seq" , sequenceName = "VEH_D_WARN_LIGHT_STATUS_SEQ")
     private Long warningLightStatusId;
 
-    @OneToOne(targetEntity = EAppraisalTestDrivingStatus.class, fetch = FetchType.LAZY)
+    @OneToOne(targetEntity = EAppraisalTestDrivingStatus.class, fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "VEH_STATUS_ID",referencedColumnName = "VEH_STATUS_ID", nullable = false)
     @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private EAppraisalTestDrivingStatus appraiseStatusId;
